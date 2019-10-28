@@ -1,6 +1,6 @@
-# Matlab MNISTNet
+# Neural Network
 
-MATLAB implementation of the building blocks of a neural network for the MNIST dataset classification. Based on the Python 2.7 code from [mnielsen](https://github.com/mnielsen/neural-networks-and-deep-learning).
+MATLAB implementation of the building blocks of a neural network. We test the network on the MNIST dataset for classification. Based on the Python 2.7 code from [mnielsen](https://github.com/mnielsen/neural-networks-and-deep-learning).
 
 #### MNIST dataset
 The original MNIST dataset can be obtained from [here](http://yann.lecun.com/exdb/mnist/).

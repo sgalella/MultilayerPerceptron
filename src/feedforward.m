@@ -1,14 +1,14 @@
-function y_pred = feedforward(NN, training_example)
+function ypred = feedforward(NN, trainingExample)
 %
 % Function:
 % - feedforward: Computes the output of the input in the NN
 %
 % Inputs:
 % - NN: rained neural network (NeuralNet)
-% - Input: Training example (781x1 double)
+% - trainingExample: Training example (781x1 double)
 %
 % Outputs:
-% - y_pred: output predicted (10x1 double)
+% - ypred: output predicted (10x1 double)
 %
 % Author: sgalella
 % https://github.com/sgalella
@@ -16,7 +16,7 @@ function y_pred = feedforward(NN, training_example)
 % https://github.com/mnielsen/neural-networks-and-deep-learning
 
 % Set the input as the initial activation
-a = training_example;
+a = trainingExample;
 
 % Check matching between sizes of the weights and the input
 assert(isequal(size(NN.weights{1},2),size(a,1)),...
@@ -28,7 +28,7 @@ for i = 1:length(NN.weights)
 end
 
 % Set y to be the last activation
-y_pred = a;
+ypred = a;
 
 end
 

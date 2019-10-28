@@ -7,7 +7,7 @@ classdef NeuralNet
 % https://github.com/sgalella
 
 properties
-    num_layers
+    numLayers
     sizes
     bias
     weights
@@ -17,11 +17,11 @@ methods
     function NN = NeuralNet(runSeed, arg)
         if nargin == 2
             s = RandStream.create('mrg32k3a','NumStreams', 1,'Seed',runSeed);
-            NN.num_layers = length(arg);
+            NN.numLayers = length(arg);
             NN.sizes = arg;
-            NN.bias = cell(NN.num_layers-1,1);
-            NN.weights = cell(NN.num_layers-1,1);
-            for i = 2:NN.num_layers
+            NN.bias = cell(NN.numLayers-1,1);
+            NN.weights = cell(NN.numLayers-1,1);
+            for i = 2:NN.numLayers
                NN.bias{i-1} = randn(s,[NN.sizes(i) 1]); 
                NN.weights{i-1} = randn(s,[NN.sizes(i) NN.sizes(i-1)]);
             end

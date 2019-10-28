@@ -1,7 +1,7 @@
-function y2 = y_map(y1)
+function y2 = ymap(y1)
 %
 % Function:
-% y_map: Maps integer to one hot vector or vector to integer
+% ymap: Maps integer to one hot vector or vector to integer
 %
 % Input: 
 % y1: integer or vector (10x1)

@@ -27,29 +27,29 @@ testY = double(testY);
 
 % Initialize Neural Network
 runSeed = 4371;
-neurons_layer = [784 30 10];
-Net = NeuralNet(runSeed, neurons_layer);
+neuronsLayer = [784 30 10];
+Net = NeuralNet(runSeed, neuronsLayer);
 
 % Prepare training and test set. Sets are formed by cells containing the
 % examples and labels separated
-training_set = cell(1,2);
-training_set{1,1} = trainX;
-training_set{1,2} = trainY;
+trainingSet = cell(1,2);
+trainingSet{1,1} = trainX;
+trainingSet{1,2} = trainY;
 
-test_data = cell(1,2);
-test_data{1,1} = testX;
-test_data{1,2} = testY;
+testData = cell(1,2);
+testData{1,1} = testX;
+testData{1,2} = testY;
 
 % Initialize learning rate (eta), the size of the mini batches and the
 % number of epochs and run the stochastic gradient descent
 eta = 0.5; % Learning rate
-mini_batch_size = 30;
+miniBatchSize = 30;
 epochs = 20; 
-[Net, accuracy, cost] = stochastic_GD(runSeed, Net, training_set, test_data, eta, mini_batch_size, epochs);
+[Net, accuracy, cost] = stochasticGD(runSeed, Net, trainingSet, testData, eta, miniBatchSize, epochs);
 
 % Plot the accuracy and cost over epochs
 figure()
-sgtitle(['$\eta = ',num2str(eta),'$', ', batch size = ',num2str(mini_batch_size),', epochs = ',num2str(epochs)],'interpreter','latex','fontsize',22)
+sgtitle(['$\eta = ',num2str(eta),'$', ', batch size = ',num2str(miniBatchSize),', epochs = ',num2str(epochs)],'interpreter','latex','fontsize',22)
 subplot(2,1,1)
 plot(1:epochs, accuracy,'b');
 ylim([0 100])

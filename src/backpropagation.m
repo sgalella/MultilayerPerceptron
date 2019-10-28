@@ -1,8 +1,8 @@
-function [nabla_w, nabla_b, cost_example] = backpropagation(NN, x, y)
+function [nablaW, nablab, costExample] = backpropagation(NN, x, y)
 %
 % Function:
 % - backpropagation: Computes the backpropagation of the NN with inputs
-% mini_batch_X and labels mini_batch_Y
+% miniBatchX and labels mini_batch_Y
 %
 % Inputs: 
 % - NN: Initialized neural network (NeuralNet)
@@ -11,9 +11,9 @@ function [nabla_w, nabla_b, cost_example] = backpropagation(NN, x, y)
 % batch (1x1 double)
 %
 % Outputs:
-% - nabla_w: gradient of the weights of the example
-% - nabla_b: gradient of the bias of the example
-% - cost_example: quadratic cost of the example
+% - nablaW: gradient of the weights of the example
+% - nablab: gradient of the bias of the example
+% - costExample: quadratic cost of the example
 %
 % Author: sgalella
 % https://github.com/sgalella
@@ -21,25 +21,25 @@ function [nabla_w, nabla_b, cost_example] = backpropagation(NN, x, y)
 % https://github.com/mnielsen/neural-networks-and-deep-learning
 
 % Map the output of y to a one hot vector
-y = y_map(y);
+y = ymap(y);
 
 % Initialize gradient of the weigths and bias, having the same size as the
 % ones in NN
-nabla_b = NN.bias;
-nabla_w = NN.weights;
+nablab = NN.bias;
+nablaW = NN.weights;
 
 % Set them to be all zeros
-nabla_w = cellfun(@(x) x*0, nabla_w,'un',0);
-nabla_b = cellfun(@(x) x*0, nabla_b,'un',0);
+nablaW = cellfun(@(x) x*0, nablaW,'un',0);
+nablab = cellfun(@(x) x*0, nablab,'un',0);
 
 % Compute a0 and initialize cell for different a's and z's
 activation = x;
-activations = cell(NN.num_layers,1);
+activations = cell(NN.numLayers,1);
 activations{1} = x;
-zs = cell(NN.num_layers-1,1);
+zs = cell(NN.numLayers-1,1);
 
 % Compute the feedforward run
-for i = 1:length(nabla_b)
+for i = 1:length(nablab)
     z = NN.weights{i}*activation + NN.bias{i};
     zs{i} = z;
     activation = sigmoid(z);
@@ -47,18 +47,18 @@ for i = 1:length(nabla_b)
 end
 
 % Compute the delta at the output layer. Update nabla_b and nabla_w
-cost_example = quadratic_error(activations{end},y);
-delta = cost_derivative(activations{end}, y) .* derivative_sigmoid(zs{end});
-nabla_b{end} = delta;
-nabla_w{end} = delta*activations{end-1}';
+costExample = quadraticerror(activations{end},y);
+delta = costderivative(activations{end}, y) .* derivativesigmoid(zs{end});
+nablab{end} = delta;
+nablaW{end} = delta*activations{end-1}';
 
 % Compute the delta for the remaining layers. Update nabla_b and nabla_w
-for layer = 2:NN.num_layers-1
+for layer = 2:NN.numLayers-1
     z = zs{end + (1-layer)};
-    sp = derivative_sigmoid(z);
+    sp = derivativesigmoid(z);
     delta = NN.weights{end-(layer-2)}'*delta.*sp;
-    nabla_b{end + (1-layer)} = delta;
-    nabla_w{end + (1-layer)} = delta*activations{end - layer}';
+    nablab{end + (1-layer)} = delta;
+    nablaW{end + (1-layer)} = delta*activations{end - layer}';
 end
 
 

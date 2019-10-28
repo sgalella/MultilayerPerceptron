@@ -1,7 +1,7 @@
-function sumCell = sumCell(cell1,cell2)
+function sumCell = sumcells(cell1,cell2)
 %
 % Function:
-% sumCell: sums each component of two different cells
+% sumcells: sums each component of two different cells
 %
 % Input:
 % cell1: cell (3x1 double)

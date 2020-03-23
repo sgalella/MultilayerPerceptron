@@ -3,11 +3,11 @@ function sumCell = sumcells(cell1,cell2)
 % Function:
 % sumcells: sums each component of two different cells
 %
-% Input:
+% Inputs:
 % cell1: cell (3x1 double)
 % cell2: cell (3x1 double)
 %
-% Output:
+% Outputs:
 % sumCell: sum of components of cell1 and cell2 (3x1 double)
 %
 % Author: sgalella

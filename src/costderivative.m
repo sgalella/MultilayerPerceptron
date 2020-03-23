@@ -3,11 +3,11 @@ function costPrime = costderivative(outputActivations, y)
 % Function:
 % - costDerivative: Computes derivative of the cost in the output layer
 %
-% Input:
+% Inputs:
 % - outputActivations: Activation of the last layer (10x1 double)
 % - y: output of the network (10x1 double)
 % 
-% Output: 
+% Outputs 
 % - costPrime: Derivative of the cost in the output layer (10x1 double)
 %
 % Author: sgalella

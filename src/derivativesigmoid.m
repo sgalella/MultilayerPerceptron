@@ -3,10 +3,10 @@ function sigmoidPrime = derivativesigmoid(z)
 % Function:
 % derivativesigmoid: Computes the derivate of the sigmoid function of z
 %
-% Input:
+% Inputs:
 % z: Weighted input of the output layer (10x1 double)
 %
-% Output:
+% Outputs:
 % sigmoidPrime: Derivative of the sigmoid function of z (10x1 double)
 %
 % Author: sgalella

@@ -7,7 +7,7 @@ function accuracy = evaluate(NN, testData)
 % - NN: Trained neural network (NeuralNet)
 % - testData: Data used to test the network (cell of size 1x2)
 %
-% Outpus:
+% Outputs:
 % - Accuracy: Percentage of correct answers of the neural network (double)
 %
 % Author: sgalella

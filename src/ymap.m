@@ -3,10 +3,10 @@ function y2 = ymap(y1)
 % Function:
 % ymap: Maps integer to one hot vector or vector to integer
 %
-% Input: 
+% Inputs: 
 % y1: integer or vector (10x1)
 %
-% Output:
+% Outputs:
 % y2: vector (10x1) or integer
 %
 % Author: sgalella

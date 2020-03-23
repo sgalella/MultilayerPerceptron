@@ -3,10 +3,10 @@ function s = sigmoid(z)
 % Function:
 % sigmoid: Computes the sigmoid function of z
 %
-% Input:
+% Inputs:
 % z: Weighted input of the output layer (10x1 double)
 %
-% Output:
+% Outputs:
 % s: Sigmoid of z (10x1 double)
 %
 % Author: sgalella

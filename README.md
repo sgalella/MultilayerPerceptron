@@ -2,7 +2,8 @@
 
 MATLAB implementation of the building blocks of a neural network. We test the network on the MNIST dataset for classification. Based on the Python 2.7 code from [mnielsen](https://github.com/mnielsen/neural-networks-and-deep-learning).
 
-#### MNIST dataset
+
+## MNIST dataset
 The original MNIST dataset can be obtained from [here](http://yann.lecun.com/exdb/mnist/).
 The dataset used in this implementation has been obtained from [daniel-e repository](https://github.com/daniel-e/mnist_octave).
 
@@ -14,7 +15,8 @@ The MNIST dataset contains images of handwritten numbers from 0 to 9. These imag
 
 The images are normalized in the preprocessing, converting each pixel values from 0-255 to 0-1.
 
-#### Architecture
+
+## Architecture
 The network is formed by the input layer, a hidden layer and the output layer. The preset number of neurons per layer is 784, 30 and 10, respectively. 
 
 The scheme of the computation of the network is represented in the following figure:
@@ -25,13 +27,18 @@ The scheme of the computation of the network is represented in the following fig
 </p>
 
 
-
-#### Performance
+## Performance
 This implementation achieves a maximum accuracy around 95% on test set. The best results are obtained when the learning rate (eta) equals to 3 and the mini batch size is set to 10 (approximately with 15-20 epochs). The code also provides the plot representation of the accuracy and cost over time (parameters were selected for visualization purposes):
 
 <p align="center">
   <img width="560" height="420" src="images/plot.jpg">
 </p>
 
-#### References
+
+## Usage
+
+Run `main` from the command window. To modify any parameters, change `main.m`.
+
+
+## References
 1. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com)

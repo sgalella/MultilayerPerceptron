@@ -21,10 +21,10 @@ The network is formed by the input layer, a hidden layer and the output layer. T
 
 The scheme of the computation of the network is represented in the following figure:
 
-
 <p align="center">
-  <img width="800" height="450" src="images/architecture.jpg">
+  <img width="850" height="450" src="images/architecture.png">
 </p>
+
 
 
 ## Performance

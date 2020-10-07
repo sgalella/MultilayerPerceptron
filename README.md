@@ -10,8 +10,9 @@ The dataset used in this implementation has been obtained from [daniel-e reposit
 The MNIST dataset contains images of handwritten numbers from 0 to 9. These images have a size of 28x28 pixels, with 60,000 images on the training set and 10,000 on the test set. In the dataset, each image is transformed into a vector of dimension 1x784. 
 
 <p align="center">
-  <img width="300" height="250" src="images/digits.jpg">
+  <img width="300" height="250" src="images/digits.png">
 </p>
+
 
 The images are normalized in the preprocessing, converting each pixel values from 0-255 to 0-1.
 
@@ -31,8 +32,9 @@ The scheme of the computation of the network is represented in the following fig
 This implementation achieves a maximum accuracy around 95% on test set. The best results are obtained when the learning rate (eta) equals to 3 and the mini batch size is set to 10 (approximately with 15-20 epochs). The code also provides the plot representation of the accuracy and cost over time (parameters were selected for visualization purposes):
 
 <p align="center">
-  <img width="560" height="420" src="images/plot.jpg">
+  <img width="560" height="420" src="images/plot.png">
 </p>
+
 
 
 ## Usage

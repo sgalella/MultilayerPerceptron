@@ -1,6 +1,6 @@
 # Neural Network
 
-MATLAB implementation of the building blocks of a neural network. We test the network on the MNIST dataset for classification. Based on the Python 2.7 code from [mnielsen](https://github.com/mnielsen/neural-networks-and-deep-learning).
+MATLAB implementation of the building blocks of a [feedforward neural network](https://en.wikipedia.org/wiki/Feedforward_neural_network). We test the network on the MNIST dataset for classification. Based on the Python 2.7 code from [mnielsen](https://github.com/mnielsen/neural-networks-and-deep-learning).
 
 
 ## MNIST dataset
